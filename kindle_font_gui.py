@@ -1,3 +1,4 @@
+import ctypes
 import os
 import re
 import sys
@@ -6,6 +7,17 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
 from fontTools.ttLib import TTFont
+
+# ── High DPI awareness (Windows only) ──────────────────────────────────────
+if sys.platform == "win32":
+    try:
+        ctypes.windll.shcore.SetProcessDpiAwareness(2)   # Per-Monitor DPI Aware V2
+    except Exception:
+        try:
+            ctypes.windll.user32.SetProcessDPIAware()    # fallback (Vista+)
+        except Exception:
+            pass
+# ───────────────────────────────────────────────────────────────────────────
 
 APP_TITLE = "Kindle Font Inspector & Fixer"
 TARGET_EXTS = [("Font Files", "*.otf *.ttf"), ("All Files", "*.*")]
