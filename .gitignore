@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fonts (Do not upload proprietary fonts)
+*.otf
+*.ttf
+*.ttc
+*.ttx
+
+# OS generated files
+.DS_Store
+Thumbs.db
