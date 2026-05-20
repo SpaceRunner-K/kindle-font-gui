@@ -1,5 +1,7 @@
 # Kindle Font Inspector & Fixer
 
+![Screen Shot](docs/screenshot.png)
+
 Kindle 向けカスタムフォントの `name` テーブル、`OS/2`、`head` を確認・修正し、保存前後に整合性チェックできる GUI ツールです。
 
 ## Features
